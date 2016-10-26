@@ -175,6 +175,11 @@ body {
   margin: 0 1% 0 1%;
 }
 
+.unavaible-lot {
+  background-color: #d31422;
+  opacity: 0.8;
+}
+
 /*Images*/
 
 /*#a1 {
