@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('.cover-container').click(function(click) {
 		// I dont know why but click event was calling twice, this will solve
 		click.stopImmediatePropagation();
@@ -10,4 +11,5 @@ $(document).ready(function() {
 			$(click.target).toggleClass('unavaible-lot');
 		}
 	});
+
 });
