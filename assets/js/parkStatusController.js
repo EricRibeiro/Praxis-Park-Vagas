@@ -20,16 +20,22 @@ function checkParkStatus() {
 
             	var parkElement = document.getElementById(parkName);
 
-            	// Define status
-            	if (parkState == 0) {
-	            	if (!parkElement.className.match('unavaible-lot')) {
-	            		parkElement.className += ' unavaible-lot';
+            	if (parkElement) {
+	            	// Define status
+	            	if (parkState == 0) {
+		            	if (!parkElement.className.match('unavaible-lot')) {
+		            		parkElement.className += ' unavaible-lot';
+		            	}
+	            	} else if (parkState == 1) {
+	            		if (parkElement.className.match('unavaible-lot')) {
+		            		parkElement.className = parkElement.className.split(' ')[0];
+		            	}
 	            	}
-            	} else if (parkState == 1) {
-            		if (parkElement.className.match('unavaible-lot')) {
-	            		parkElement.className = parkElement.className.split(' ')[0];
-	            	}
+            	} else {
+            		alert("A vaga " + parkName + " foi cadastrada de forma incorreta, removendo...");
             	}
+	        
+	        removeParkFromDatabase(parkId);
 	        }
 	    }
 	}

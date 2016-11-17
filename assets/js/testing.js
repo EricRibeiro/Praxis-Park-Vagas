@@ -15,7 +15,7 @@ function insertParkData() {
 
     var data = {
         "estado": isAvaible,
-        "nmvaga": parkingSpace
+        "nmvaga": parkingSpace.toLowerCase()
     };
 
     var dataToSend = '_data=' + JSON.stringify(data);
