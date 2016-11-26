@@ -16,7 +16,7 @@ function main() {
       console.log('message written');
       port.on('data', function(data){
         dataSend = data[0];
-        if (dataSend == 1) {
+        if (dataSend == 0) {
           console.log ("Vaga Ocupada")
         }
 
@@ -43,10 +43,10 @@ function arduinoState(dataSend) {
     }  
   }
 
-  xmlhttp.open("PUT", "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga/", true); //adicionar a ID da Vaga em Questão a requisição PUT
+  xmlhttp.open("PUT", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/152", true); //adicionar a ID da Vaga em Questão a requisição PUT
   xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   var info = {
-    "estado": dataSend
+    "item_level": dataSend
   }
   var dataToSend = '_data=' + JSON.stringify(info);
   xmlhttp.send(dataToSend);

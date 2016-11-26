@@ -10,12 +10,12 @@ function insertParkData() {
         }
     };
 
-    xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga", true);
+    xmlhttp.open("POST", "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem", true);
     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
     var data = {
-        "estado": isAvaible,
-        "nmvaga": parkingSpace.toLowerCase()
+        "item_level": isAvaible,
+        "especializacao": parkingSpace.toLowerCase()
     };
 
     var dataToSend = '_data=' + JSON.stringify(data);
@@ -28,7 +28,7 @@ function deleteParkingLocation() {
 
     var xmlhttp = new XMLHttpRequest();
 
-    var parkToDeleteAddress = "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga/" + parkingId;
+    var parkToDeleteAddress = "http://www.smartsoft.com.br/webservice/restifydb/Employees/diw_personagem/" + parkingId;
 
     // Sent a DELETE request with bookId
     xmlhttp.open("DELETE", parkToDeleteAddress, true);
