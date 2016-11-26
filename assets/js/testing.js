@@ -23,19 +23,19 @@ function insertParkData() {
     xmlhttp.send(dataToSend);
 }
 
-// function deleteParkingLocation() {
-// 	var parkingId = document.forms[1].parkingId.value;
+function deleteParkingLocation() {
+	var parkingId = document.forms[1].parkingId.value;
 
-//     var xmlhttp = new XMLHttpRequest();
+    var xmlhttp = new XMLHttpRequest();
 
-//     var parkToDeleteAddress = "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga/" + parkingId;
+    var parkToDeleteAddress = "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga/" + parkingId;
 
-//     // Sent a DELETE request with bookId
-//     xmlhttp.open("DELETE", parkToDeleteAddress, true);
-//     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//     xmlhttp.send();
+    // Sent a DELETE request with bookId
+    xmlhttp.open("DELETE", parkToDeleteAddress, true);
+    xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xmlhttp.send();
 
 
-//     alert('Removido com sucesso');
-//     document.forms[1].parkingId.value = "";
-// }
+    alert('Removido com sucesso');
+    document.forms[1].parkingId.value = "";
+}

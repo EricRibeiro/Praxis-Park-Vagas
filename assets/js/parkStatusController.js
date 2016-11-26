@@ -35,21 +35,21 @@ function checkParkStatus() {
             		alert("A vaga " + parkName + " foi cadastrada de forma incorreta, removendo...");
             	}
 	        
-	        // removeParkFromDatabase(parkId);
+	        removeParkFromDatabase(parkId);
 	        }
 	    }
 	}
 }
 
-// function removeParkFromDatabase(parkId) {
-//     var xmlhttp = new XMLHttpRequest();
+function removeParkFromDatabase(parkId) {
+    var xmlhttp = new XMLHttpRequest();
 
-//     var parkToDeleteAddress = "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga/" + parkId;
+    var parkToDeleteAddress = "http://www.smartsoft.com.br/webservice/restifydb/Employees/prp_vaga/" + parkId;
 
-//     // Sent a DELETE request with bookId
-//     xmlhttp.open("DELETE", parkToDeleteAddress, true);
-//     xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//     xmlhttp.send();
-// }
+    // Sent a DELETE request with bookId
+    xmlhttp.open("DELETE", parkToDeleteAddress, true);
+    xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xmlhttp.send();
+}
 
 setInterval(checkParkStatus, 1000);
